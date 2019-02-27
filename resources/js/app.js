@@ -41,8 +41,7 @@ $('a[data-method="delete"]').click(function(){
             type: 'DELETE',
             dataType: "JSON",
             data: {
-            	"article_id": article_id,
-                "id": id,
+                "id": 10,
                 "_method": 'DELETE',
             },
             success: function ()

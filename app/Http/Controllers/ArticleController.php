@@ -103,12 +103,11 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
+        $article = Article::find($id);
+        $article->delete();
+        // Article::find($id)->delete();
 
-        // $article = Article::find($id);
-        // $article->delete();
-
-        // return redirect()->route('articles_path');
-        return 'delete function';
+        return redirect()->route('articles_path');
     }
 }
 #php artisan make:controller ArticleController --resource --model=Article
